@@ -1,0 +1,18 @@
+https://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuideLucid
+
+http://ffmpeg.org/trac/ffmpeg/wiki/StreamingGuide
+
+https://www.virag.si/2012/01/web-video-encoding-tutorial-with-ffmpeg-0-9/
+
+https://ffmpeg.org/trac/ffmpeg/wiki/x264EncodingGuide
+
+
+
+ffmpeg -i spider.mp4 -vcodec libx264 -vprofile baseline -preset slow -b:v 250k -maxrate 250k -bufsize 500k -vf scale=-1:360 -threads 0 -acodec libmp3lame -b:a 96k output.mp4
+
+
+ffmpeg -i input.mp4 -b:v 128k -b:a 128k -codec:a libvorbis output128.ogv
+
+ffmpeg -i input.avi -filter:v scale=720:-1 -acodec copy output.mkv
+
+
